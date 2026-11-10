@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cellular IoT - Dashboard</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script src="https://kit.fontawesome.com/f0601b0fb2.js" crossorigin="anonymous"></script>
+  <script type='module' src='https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js'></script>
+  <script nomodule='' src='https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js'></script>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gaugeJS/dist/gauge.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+</head>
+<body>
+  
+  <div class="dashboard">
+    <div class="sidebar">
+      <div id="widget-list" class="widget-list">
+        <div class="widget-label" id="btn__card">Button</div>
+        <div class="widget-label" id="sensor__card">Sensor</div>
+        <div class="widget-label" id="slider__card">Slider</div>
+        <div class="widget-label" id="chart__card">Chart</div>
+        <div class="widget-label" id="gauge__card">Gauge</div>
+        <div class="widget-label" id="alert__card">Alert</div>
+      </div>
+    </div>
+    <div class="form__container" id="form__container">
+      <form class="form" id="widget-form">
+        <label class="name">Display Name:</label>
+        <input type="text" class="form__input" placeholder="" id="display__name">
+        <label class="name">Node ID:</label>
+        <input type="text" class="form__input" placeholder="" id="sensor__id">
+        <div id="unit__container">
+        <label class="name">Unit:</label>
+        <input type="text" class="form__input" placeholder="Optional" id="unit__id">
+        </div>
+        <div class="btn btn__primary" id="submit">Link</div>
+      </form>
+    </div>
+
+    <div class="user__container" id="user__container">
+      <form class="form" id="user__form">
+        <label class="name">User Name: </label>
+        <input type="text" class="form__input" placeholder="" id="user__name">
+        <label class="name">Kit ID:</label>
+        <input type="text" class="form__input" placeholder="" id="kit__id">
+        <div class="btn btn__primary" id="user__submit">Link</div>
+      </form>
+    </div>
+
+    <div class="user_name" id="user_name">
+      User's Dashboard
+    </div>
+    <div class="container">
+    </div>
+    
+
+    <div class="icon">
+      <div class="icon__add" id="add-button">
+        <ion-icon name="add"></ion-icon>
+      </div>
+      <div class="icon__edit" id="edit-button">
+        <ion-icon name="create"></ion-icon>
+      </div>
+      <div class="icon__user" id="userlink-button">
+        <ion-icon name="person"></ion-icon>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
